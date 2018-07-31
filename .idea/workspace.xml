@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="255069e9-e1f9-4a62-a1ad-0a9c286bdfef" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/controller/CreateTransactionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/controller/GetStatisticsResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/controller/OnlineController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/Exceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/domain/Snapshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/domain/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/domain/TransactionConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/domain/TransactionStatistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/n26/controller/OnlineControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/n26/domain/TransactionConverterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/n26/integration/SmokeIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/n26/service/snapshot/SnapshotServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/request-create-transaction-not-parsable-amount.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/request-create-transaction-not-parsable-date.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/request-create-transaction.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/request-unparsable.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/response-get-statistics.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path=".idea/inspectionProfiles/Project_Default.xml" />
+    <ignored path=".idea/libraries/Maven__ant_ant_1_6_5.xml" />
+    <ignored path=".idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
+    <ignored path=".idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_guava_guava_24_1_jre.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" />
+    <ignored path=".idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
+    <ignored path=".idea/libraries/Maven__commons_collections_commons_collections_3_2.xml" />
+    <ignored path=".idea/libraries/Maven__commons_dbcp_commons_dbcp_1_2_2.xml" />
+    <ignored path=".idea/libraries/Maven__commons_lang_commons_lang_2_3.xml" />
+    <ignored path=".idea/libraries/Maven__commons_logging_commons_logging_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" />
+    <ignored path=".idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
+    <ignored path=".idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
+    <ignored path=".idea/libraries/Maven__junit_junit_4_12.xml" />
+    <ignored path=".idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" />
+    <ignored path=".idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" />
+    <ignored path=".idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
+    <ignored path=".idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
+    <ignored path=".idea/libraries/Maven__ognl_ognl_2_6_9.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_31.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_31.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_31.xml" />
+    <ignored path=".idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" />
+    <ignored path=".idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_10_Final.xml" />
+    <ignored path=".idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
+    <ignored path=".idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
+    <ignored path=".idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
+    <ignored path=".idea/libraries/Maven__org_projectlombok_lombok_1_18_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
+    <ignored path=".idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_3_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_aop_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_beans_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_context_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_core_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_expression_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_jcl_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_test_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_web_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_webmvc_5_0_7_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_unitils_unitils_2_2.xml" />
+    <ignored path=".idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" />
+    <ignored path=".idea/.name" />
+    <ignored path=".idea/compiler.xml" />
+    <ignored path=".idea/encodings.xml" />
+    <ignored path=".idea/misc.xml" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/sbt.xml" />
+    <ignored path=".idea/uiDesigner.xml" />
+    <ignored path=".idea/vcs.xml" />
+    <ignored path="coding-challenge.iml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TransactionServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="652">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnlineController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/OnlineController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnapshotService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateTransactionRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/CreateTransactionRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+              <folding>
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnapshotServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Snapshot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/domain/Snapshot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="611">
+              <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/domain/TransactionConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="39" column="38" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/domain/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Instant.now()</find>
+      <find>addTransaction operation has been started; transaction:</find>
+      <find>count=6</find>
+      <find>sum=0.00, avg=0.00, max=0.00, min=0.00, count=6</find>
+      <find>SNAPSHOT-CREATED::</find>
+      <find>delta</find>
+      <find>updateSnapshot operation has finished</find>
+      <find>updateSnapshot operation has finished;</find>
+      <find>ALL:</find>
+      <find>TIMESTAMP::</find>
+      <find>NOW-TEST::</find>
+      <find>REQUEST-NOW::</find>
+      <find>&quot;</find>
+      <find>new Snapshot</find>
+      <find>error</find>
+      <find>NOW-SNAPSHOT:</find>
+      <find>NOW-SNAPSHOT::</find>
+      <find>addTransaction operation has been started;</find>
+      <find>&quot;1626.62&quot;</find>
+      <find>&quot;method&quot;: &quot;DELETE&quot;</find>
+      <find>Instant.now</find>
+      <find>{&quot;sleep&quot;: 5000}</find>
+      <find>&quot;sleep</find>
+      <find>SNAPSHOT-CREATED</find>
+      <find>55000</find>
+      <find>illegalStateException</find>
+      <find>result::</find>
+      <find>logger.de</find>
+      <find>exception</find>
+      <find>syn</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/grpc-java" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/projects/ba-account-service" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/projects/ba-am/aftermath-funnel-service" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/projects/ba-am/aftermath-funnel-service/aftermath-common-settings" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/projects/ba-am/aftermath-funnel-service/service/aftermath-account-protocol" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/projects/ba-am/ba-account-service" value="PREVIEW" />
+        <entry key="$USER_HOME$/work/projects/ba-am/ba-funnel-service" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/Snapshot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/TxnServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/TxnService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/TransactionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/TransactionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/it/resources/request-create-transaction.json" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/repository/TransactionRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/ApllicationStartup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/txn/snapshot/SnapshotServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/txn/snapshot/SnapshotService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/src/it/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/domain/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/GetStatisticsResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/IncorrectAmountException.java" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/controller/CreateTransactionRequestValidator.java" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/controller/TransactionConverter.java" />
+        <option value="$PROJECT_DIR$/src/it/resources/request-create-transaction-unparsable.json" />
+        <option value="$PROJECT_DIR$/src/it/resources/response-get-transactions.json" />
+        <option value="$PROJECT_DIR$/src/it/resources/request-create-transaction-not-parsable-amount.json" />
+        <option value="$PROJECT_DIR$/src/it/resources/request-create-transaction-not-parsable-date.json" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/OutdatedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/CreateTransactionRequest.java" />
+        <option value="$PROJECT_DIR$/src/it/resources/request-unparsable.json" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SummaryCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/repository/txn/TransactionRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/repository/txn/TransactionRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/OnlineController.java" />
+        <option value="$PROJECT_DIR$/src/it/resources/testcases/http03.json" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/HttpJsonIT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/ApplicationStartup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/DateExceedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/IncorrectDateException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/RestExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/controller/exception/Exceptions.java" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/controller/OnlineControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/domain/TransactionStatistics.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/service/snapshot/SnapshotServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/domain/TransactionConverter.java" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/domain/TransactionConverterTest.java" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/integration/MainIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/it/java/com/n26/integration/SmokeIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/Application.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/n26/integration/SmokeIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/domain/Snapshot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotServiceImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="snapshot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="txn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="n26" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coding-challenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iq84dffc47" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/n26/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/opt/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.n26.domain" />
+      <recent name="com.n26.service.snapshot" />
+      <recent name="com.n26.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/it/resources" />
+      <recent name="$PROJECT_DIR$/src/test" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.n26.integration" />
+      <recent name="com.n26.domain" />
+      <recent name="com.n26.service.snapshot" />
+      <recent name="com.n26.controller" />
+      <recent name="com.n26" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.n26.service.snapshot" />
+      <recent name="com.n26.controller.exception" />
+      <recent name="com.n26.controller" />
+      <recent name="com.n26.service.txn.snapshot" />
+      <recent name="com.n26.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.SmokeIntegrationTest">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SmokeIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coding-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.n26.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.n26.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.n26.integration.SmokeIntegrationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SmokeIntegrationTest.getStatisticsAfterDelay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coding-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.n26.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.n26.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.n26.integration.SmokeIntegrationTest" />
+      <option name="METHOD_NAME" value="getStatisticsAfterDelay" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TransactionConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coding-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.n26.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.n26.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.n26.domain.TransactionConverterTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TransactionConverterTest.convertExceptionallyIncorrectAmountException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coding-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.n26.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.n26.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.n26.domain.TransactionConverterTest" />
+      <option name="METHOD_NAME" value="convertExceptionallyIncorrectAmountException" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TransactionConverterTest.convertExceptionallyOutdatedException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coding-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.n26.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.n26.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.n26.domain.TransactionConverterTest" />
+      <option name="METHOD_NAME" value="convertExceptionallyOutdatedException" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TransactionConverterTest.convertExceptionallyOutdatedException" />
+      <item itemvalue="JUnit.TransactionConverterTest.convertExceptionallyIncorrectAmountException" />
+      <item itemvalue="JUnit.TransactionConverterTest" />
+      <item itemvalue="JUnit.SmokeIntegrationTest" />
+      <item itemvalue="JUnit.SmokeIntegrationTest.getStatisticsAfterDelay" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SmokeIntegrationTest" />
+        <item itemvalue="JUnit.SmokeIntegrationTest.getStatisticsAfterDelay" />
+        <item itemvalue="JUnit.TransactionConverterTest" />
+        <item itemvalue="JUnit.TransactionConverterTest.convertExceptionallyIncorrectAmountException" />
+        <item itemvalue="JUnit.TransactionConverterTest.convertExceptionallyOutdatedException" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Downloads/akka-quickstart-scala" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="255069e9-e1f9-4a62-a1ad-0a9c286bdfef" name="Default" comment="" />
+      <created>1532784915735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532784915735</updated>
+      <workItem from="1532784917578" duration="51697000" />
+      <workItem from="1532953193158" duration="29894000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TransactionConverterTest_convert - 2018.07.31 at 02h 58m 20s.xml">
+      <configuration name="TransactionConverterTest.convert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionConverterTest_convertExceptionally - 2018.07.31 at 02h 59m 52s.xml">
+      <configuration name="TransactionConverterTest.convertExceptionally" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionConverterTest_convertExceptionallyOutdatedException - 2018.07.31 at 03h 01m 22s.xml">
+      <configuration name="TransactionConverterTest.convertExceptionallyOutdatedException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionConverterTest_convertExceptionallyOutdatedException - 2018.07.31 at 03h 01m 34s.xml">
+      <configuration name="TransactionConverterTest.convertExceptionallyOutdatedException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionConverterTest_convertExceptionallyIncorrectAmountException - 2018.07.31 at 03h 02m 31s.xml">
+      <configuration name="TransactionConverterTest.convertExceptionallyIncorrectAmountException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionConverterTest - 2018.07.31 at 03h 03m 28s.xml">
+      <configuration name="TransactionConverterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmokeIntegrationTest - 2018.07.31 at 03h 09m 01s.xml">
+      <configuration name="SmokeIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmokeIntegrationTest_getStatisticsAfterDelay - 2018.07.31 at 03h 10m 53s.xml">
+      <configuration name="SmokeIntegrationTest.getStatisticsAfterDelay" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmokeIntegrationTest_getStatisticsAfterDelay - 2018.07.31 at 03h 12m 18s.xml">
+      <configuration name="SmokeIntegrationTest.getStatisticsAfterDelay" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmokeIntegrationTest - 2018.07.31 at 03h 14m 00s.xml">
+      <configuration name="SmokeIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="81591000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Statistic" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2676923" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32820514" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32820514" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27897435" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.38564104" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21550672" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/n26/controller/OnlineControllerTest.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/n26/controller/OnlineControllerTest.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/java/com/n26/HttpJsonIT.java</url>
+          <line>694</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/java/com/n26/HttpJsonIT.java</url>
+          <line>361</line>
+          <properties />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotServiceImpl.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/n26/service/snapshot/SnapshotServiceImplTest.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/n26/service/snapshot/SnapshotServiceImplTest.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/n26/service/snapshot/SnapshotServiceImplTest.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/n26/domain/TransactionConverterTest.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="88" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>Instant.parse(&quot;2018-07-17T09:59:51.312Z&quot;).minus(10, ChronoUnit.SECONDS)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>now - txn.getTimestamp()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>now - timestamp</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toISO8601UTC(new Date())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getTimestamp()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>timestamp - now</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>snapshotService.getSnapshot().getAvg().toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df.format(date)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df.format(date);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>all.stream()
+        .filter(transactionPredicate)
+        .map(Transaction::getAmount).collect(Collectors.toList())</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.util.stream.Collectors</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>timestamp - now</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>now - timestamp</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getTimestamp()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/math/MathContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="746" column="4" selection-start-line="746" selection-start-column="4" selection-end-line="746" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/org/hamcrest/BaseMatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0.jar!/org/mockito/ArgumentMatchers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="271" column="22" selection-start-line="271" selection-start-column="22" selection-end-line="271" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="4614" column="8" selection-start-line="4614" selection-start-column="8" selection-end-line="4614" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/text/SimpleDateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="438" column="13" selection-start-line="438" selection-start-column="13" selection-end-line="438" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/resources/testcases/http01.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="192" lean-forward="true" selection-start-line="10" selection-start-column="192" selection-end-line="10" selection-end-column="192" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/time/LocalDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/time/temporal/ChronoField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/time/temporal/TemporalField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="1159" column="42" selection-start-line="1159" selection-start-column="42" selection-end-line="1159" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/concurrent/CopyOnWriteArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="430" column="19" selection-start-line="430" selection-start-column="19" selection-end-line="430" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar!/org/springframework/util/CollectionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/math/BigDecimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="1665" column="22" selection-start-line="1665" selection-start-column="22" selection-end-line="1665" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="251" column="12" selection-start-line="251" selection-start-column="12" selection-end-line="251" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="1118" column="29" selection-start-line="1118" selection-start-column="29" selection-end-line="1118" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/time/Instant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="206" column="19" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="19" />
+          <folding>
+            <element signature="e#60302#60303#0" expanded="true" />
+            <element signature="e#60367#60368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/concurrent/ScheduledExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="164" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/resources/testcases/http03.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="124" selection-start-line="21" selection-start-column="124" selection-end-line="21" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/ApplicationStartup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/request-create-transaction-not-parsable-amount.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/exception/DateExceedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/exception/OutdatedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="55" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/exception/IncorrectDateException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/exception/IncorrectAmountException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/exception/RestExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/exception/Exceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/repository/txn/TransactionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/repository/txn/TransactionRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/domain/TransactionStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1081">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/n26/service/snapshot/SnapshotServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1117">
+          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+          <folding>
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/n26/domain/TransactionConverterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/resources/testcases/http00.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="100" column="203" selection-start-line="100" selection-start-column="203" selection-end-line="100" selection-end-column="203" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/resources/testcases/description.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/java/com/n26/HttpJsonIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="564" lean-forward="true" selection-start-line="564" selection-end-line="564" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/GetStatisticsResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/n26/controller/OnlineControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/n26/integration/SmokeIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/CreateTransactionRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/domain/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/domain/TransactionConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/domain/Snapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/controller/OnlineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/txn/TransactionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SummaryCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/n26/service/snapshot/SnapshotServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
